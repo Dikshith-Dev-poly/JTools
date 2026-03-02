@@ -13,6 +13,7 @@ function createElement(tools) {
     const rend = document.createDocumentFragment();
     tools.forEach(t => {
         const tool = document.createElement("div");
+        tool.dataset.locate = t.location.replace("/index.html", "");
         tool.className = "tool";
 
         // Image Container
@@ -60,11 +61,23 @@ function createElement(tools) {
         tool.appendChild(tags);
 
         // Add to page
+
         rend.appendChild(tool);
     });
+
+    rend.querySelectorAll(".tool").forEach((t) => {
+        t.removeEventListener("click", addLink);
+        t.addEventListener("click", addLink);
+    })
+
+
     return rend;
 }
 
+
+function addLink(t) {
+    window.location.href = `${t.target.closest(".tool").dataset.locate}/index.html`;
+}
 
 function StartLoader() {
     document.querySelector("#tools").innerHTML = `
