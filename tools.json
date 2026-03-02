@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "name": "Drawing",
+        "description": "Draw. Design. Express.",
+        "category": "Art & Design",
+        "location": "tools/drawing/index.html",
+        "image": "img/drawing.png",
+        "tags": [
+            "fun",
+            "draw",
+            "creativity",
+            "sketch"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Image Editor",
+        "description": "Edit, crop, and enhance your images instantly.",
+        "category": "Media",
+        "location": "tools/image-editor/index.html",
+        "image": "img/image-editor.png",
+        "tags": [
+            "photo",
+            "edit",
+            "filter",
+            "media"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Location Locator",
+        "description": "Find your current location with precision.",
+        "category": "Utility",
+        "location": "tools/location-locator/index.html",
+        "image": "img/location-locator.png",
+        "tags": [
+            "gps",
+            "map",
+            "coordinates",
+            "navigation"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Weather",
+        "description": "Get real-time weather updates worldwide.",
+        "category": "Utility",
+        "location": "tools/weather/index.html",
+        "image": "img/weather.png",
+        "tags": [
+            "temperature",
+            "forecast",
+            "climate",
+            "weather"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Country Detail",
+        "description": "Explore detailed information about any country.",
+        "category": "Education",
+        "location": "tools/country-detail/index.html",
+        "image": "img/country-detail.png",
+        "tags": [
+            "country",
+            "population",
+            "facts",
+            "world"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Color Picker Tool",
+        "description": "Pick and copy perfect colors effortlessly.",
+        "category": "Design",
+        "location": "tools/color-picker/index.html",
+        "image": "img/color-picker.png",
+        "tags": [
+            "hex",
+            "rgb",
+            "design",
+            "color"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Password Generator",
+        "description": "Generate secure and strong passwords instantly.",
+        "category": "Security",
+        "location": "tools/password-generator/index.html",
+        "image": "img/password-generator.png",
+        "tags": [
+            "security",
+            "random",
+            "safe",
+            "generator"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Text to Speech",
+        "description": "Convert written text into natural speech.",
+        "category": "Accessibility",
+        "location": "tools/text-to-speech/index.html",
+        "image": "img/text-to-speech.png",
+        "tags": [
+            "voice",
+            "speech",
+            "audio",
+            "tts"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Sudoku Solver",
+        "description": "Solve Sudoku puzzles instantly with logic.",
+        "category": "Games",
+        "location": "tools/sudoku-solver/index.html",
+        "image": "img/sudoku-solver.png",
+        "tags": [
+            "puzzle",
+            "logic",
+            "game",
+            "brain"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "CSV Viewer",
+        "description": "View and analyze CSV files easily.",
+        "category": "Data",
+        "location": "tools/csv-viewer/index.html",
+        "image": "img/csv-viewer.png",
+        "tags": [
+            "csv",
+            "table",
+            "data",
+            "viewer"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "News Aggregator",
+        "description": "Stay updated with the latest global news.",
+        "category": "Information",
+        "location": "tools/news-aggregator/index.html",
+        "image": "img/news-aggregator.png",
+        "tags": [
+            "news",
+            "headlines",
+            "world",
+            "updates"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "QR Code Generator",
+        "description": "Generate QR codes instantly for any text or link.",
+        "category": "Utility",
+        "location": "tools/qr-code/index.html",
+        "image": "img/qr-code.png",
+        "tags": [
+            "qr",
+            "barcode",
+            "generator",
+            "scan"
+        ]
+    }
+]
