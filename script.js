@@ -1,3 +1,5 @@
+"use strict"
+
 const filterBtn = document.getElementById("filterbtn");
 const searchInp = document.getElementById("searchinp");
 let filteredData = {};
