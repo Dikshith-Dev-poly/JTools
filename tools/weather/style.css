@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sky: #07111f;
+    --card: rgba(255, 255, 255, 0.045);
+    --card-hover: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.16);
+    --accent: #4fc3f7;
+    --accent2: #81d4fa;
+    --warm: #ffb347;
+    --green: #69f0ae;
+    --red: #ff6b6b;
+    --purple: #ce93d8;
+    --text: #e8f4fd;
+    --muted: rgba(232, 244, 253, 0.42);
+    --muted2: rgba(232, 244, 253, 0.22);
+}
+
+::selection {
+    background-color: transparent;
+    color: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--sky);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse 800px 800px at 50% 10%,
+            rgba(79, 195, 247, 0.18) 0%,
+            transparent 70%);
+    z-index: -10;
+}
+
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputField {
+    position: relative;
+    background: none;
+    height: 100px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    border: 0.4px solid var(--border);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inputField:hover {
+    border: 0.4px solid var(--border-hover);
+}
+
+#inp-search {
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: none;
+    border: none;
+    color: white;
+
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.img-search-container,
+.button-search-container {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    height: 100px;
+}
+
+.button-search-container #btn-search {
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-weight: 800;
+    border-radius: 20px;
+    background-color: var(--accent2);
+    cursor: pointer;
+}
+
+.img-search-container #img-search {
+    width: 35px;
+    height: 35px;
+}
+
+.dashboard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashboard .info {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard .info .nameinfo #name {
+    font-size: 50px;
+}
+
+.dashboard .info .nameinfo #lal {
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.dashboard .info .timeinfo .date {
+    color: var(--muted);
+    font-weight: 300;
+}
+
+.dashboard .info .timeinfo .time {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    letter-spacing: 2px;
+}
+
+.content .cont1 {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content .cont1 .tempinfo {
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    height: 30vh;
+    background-color: var(--card);
+    transition: 200ms ease-in;
+    border: 1px solid var(--border-hover);
+
+}
+
+.tempinfo h3 {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--muted);
+}
+
+.tempinfo p {
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tempinfo p span {
+    color: var(--accent);
+    font-size: 16px;
+    position: absolute;
+}
+
+.temp-info-more {
+    display: flex;
+    gap: 20px;
+}
+
+
+.temp-info-more p {
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 0;
+}
+
+.temp-info-more h3 {
+    font-size: 20px;
+
+}
+
+.feels-like h3 {
+    color: var(--warm);
+}
+
+.max h3 {
+    color: var(--red);
+}
+
+.min h3 {
+    color: var(--green);
+}
+
+.content .cont1 .windinfo {
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    height: 30vh;
+    background-color: var(--card);
+    transition: 200ms ease-in;
+    border: 1px solid var(--border-hover);
+
+}
+
+
+.cont2 {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont2-info {
+    width: 20%;
+    height: 200px;
+    background-color: red;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--card);
+    border: 1px solid var(--border-hover);
+    transition: 200ms ease-in;
+}
+
+.content .cont1 .windinfo:hover,
+.content .cont1 .tempinfo:hover,
+.cont2-info:hover {
+    background-color: var(--card-hover);
+    transform: translateY(-5px);
+    border: 1.2px solid var(--border-hover);
+}
+
+.cond {
+    display: flex;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid var(--border);
+    background-color: #4fc2f71c;
+}
+
+.cond p {
+    font-weight: 100;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.cond .anm {
+    font-size: 100px;
+    position: relative;
+    top: -28px;
+    left: -30px;
+    color: var(--accent);
+    animation: fade-in-out 2s infinite;
+}
+
+@keyframes fade-in-out {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.windinfo h3 {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 2px;
+}
+
+
+
+.compass-container {
+    width: 100%;
+    height: 15vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.compass {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.needle {
+    width: 6px;
+    height: 60px;
+    background: linear-gradient(red 50%, white 50%);
+    border-radius: 3px;
+    transform: rotate(90deg);
+}
+
+.wind-info-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wind-speed {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--card);
+    border: 2px solid var(--border);
+}
+
+.wind-speed p {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.compass-mark {
+    position: absolute;
+}
+
+.markn {
+    top: 0;
+}
+
+.markw {
+    right: 222px;
+}
+
+.marks {
+    bottom: 0;
+}
+
+.marke {
+    left: 222px;
+}
+
+.cont2-img {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.cont2-value span {
+    font-size: 16px;
+    color: var(--muted2);
+}
+
+.cont2-value {
+    margin-bottom: 10px;
+}
+
+.cont2-info p {
+    color: var(--muted);
+    letter-spacing: 2px;
+}
+
+.perc {
+    margin-top: 20px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--muted);
+}
+
+.p-value1 {
+    background-color: var(--accent);
+    height: 100%;
+}
+
+.p-value2 {
+    background-color: var(--red);
+    height: 100%;
+}
+
+.p-value3 {
+    background-color: var(--purple);
+    height: 100%;
+}
+
+.p-value4 {
+    background-color: var(--warm);
+    height: 100%;
+}
