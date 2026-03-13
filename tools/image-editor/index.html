@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <h1>Image <span>EDITOR</span></h1>
+        </div>
+        <div id="htool">
+            <button id="upload-btn" class="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#5e5d6e">
+                    <path
+                        d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                </svg>
+                Open
+            </button>
+            <div class="export-htool">
+                <button id="export-btn" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                    </svg>
+                    Export
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside id="left">
+            <div id="left-header">
+                <p>IMAGE</p>
+                <p>No file</p>
+            </div>
+            <div id="dropzone">
+                <div id="drop">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z" />
+                    </svg>
+                    <p>Click or drag &amp; drop <br> an image to begin</p>
+                </div>
+            </div>
+            <div id="left-tool">
+                <ul>
+                    <li id="crop_resize_expand">
+                        Crop &amp; Resize
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#9a99a8">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </li>
+                    <div id="crop-resize-option">
+                        <div id="aspect-ratio">
+                            Aspect ratio
+                            <ul>
+                                <li class="active-crop">Free</li>
+                                <li>1:1</li>
+                                <li>4:3</li>
+                                <li>16:9</li>
+                                <li>3:2</li>
+                                <li>9:16</li>
+                            </ul>
+                        </div>
+                        <div id="left-width-option">
+                            width
+                            <input type="number" placeholder="px">
+                        </div>
+                        <div id="left-height-option">
+                            Height
+                            <input type="number" placeholder="px">
+                        </div>
+                        <button>Apply Crop</button>
+                    </div>
+                    <li id="transform-expand">
+                        Transform
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#9a99a8">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </li>
+                    <div id="transform-option">
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e3e3e3">
+                                    <path
+                                        d="M440-80q-50-5-96-24.5T256-156l56-58q29 21 61.5 34t66.5 18v82Zm80 0v-82q104-15 172-93.5T760-438q0-117-81.5-198.5T480-718h-8l64 64-56 56-160-160 160-160 56 58-62 62h6q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-438q0 137-91 238.5T520-80ZM198-214q-32-42-51.5-88T122-398h82q5 34 18 66.5t34 61.5l-58 56Zm-76-264q6-51 25-98t51-86l58 56q-21 29-34 61.5T204-478h-82Z" />
+                                </svg>
+                                Rotate L
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e3e3e3">
+                                    <path
+                                        d="M522-80v-82q34-5 66.5-18t61.5-34l56 58q-42 32-88 51.5T522-80Zm-80 0Q304-98 213-199.5T122-438q0-75 28.5-140.5t77-114q48.5-48.5 114-77T482-798h6l-62-62 56-58 160 160-160 160-56-56 64-64h-8q-117 0-198.5 81.5T202-438q0 104 68 182.5T442-162v82Zm322-134-58-56q21-29 34-61.5t18-66.5h82q-5 50-24.5 96T764-214Zm76-264h-82q-5-34-18-66.5T706-606l58-56q32 39 51 86t25 98Z" />
+                                </svg>
+                                Rotate R
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    width="20px">
+                                    <polyline points="17 1 17 23"></polyline>
+                                    <path d="M1 6l8 6-8 6"></path>
+                                </svg>
+                                Flip H
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    width="20px">
+                                    <polyline points="1 13 22 13"></polyline>
+                                    <path d="M6 23l6-8 6 8"></path>
+                                </svg>
+                                Flip V
+                            </li>
+                        </ul>
+
+                    </div>
+                </ul>
+            </div>
+        </aside>
+        <canvas></canvas>
+        <aside id="right">
+            <div id="right-header">
+                <p>Adjustments</p>
+            </div>
+        </aside>
+    </main>
+    <input type="file" accept="image/*" style="display: none;">
+    <script src="main.js"></script>
+</body>
+
+</html>
