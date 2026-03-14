@@ -3,6 +3,8 @@
 import { cropImage, customCrop } from "./features/crop.js"
 import { rotateL } from "./features/rotateL.js";
 import { rotateR } from "./features/rotateR.js";
+import { flipH } from "./features/flipH.js";
+import { flipV } from "./features/flipV.js";
 
 const upload = document.querySelector("input[type='file']");
 let crop;
@@ -65,7 +67,7 @@ function drawImageToCanvas(file) {
             document.querySelector("#upload-btn").style.pointerEvents = "";
         }
         img.onerror = () => {
-            console.erro("Failed to load image");
+            console.error("Failed to load image");
             document.querySelector("#upload-btn").style.pointerEvents = "";
 
         }
@@ -172,11 +174,26 @@ document.querySelector("#transform-option ul").addEventListener("click", (e) => 
         rotateAngle = rotateL(ctx, imgRef, rotateAngle, crop);
     } else if (e.target.matches("#rr")) {
         rotateAngle = rotateR(ctx, imgRef, rotateAngle, crop);
+    } else if (e.target.matches("#fh")) {
+        e.target.dataset.fliped = e.target.dataset.fliped === "true" ? "false" : "true";
+        flipH(ctx, imgRef, e.target.dataset.fliped, crop);
+    } else if (e.target.matches("#fv")) {
+        e.target.dataset.fliped = e.target.dataset.fliped === "true" ? "false" : "true";
+        flipV(ctx, imgRef, e.target.dataset.fliped, crop);
     }
 })
+
+
+
 
 
 function reset() {
     resetCrop();
     rotateAngle = 0;
+    document.querySelector("#fh").dataset.fliped = "false";
+    document.querySelector("#fv").dataset.fliped = "false";
 }
+
+
+
+//right sidebar options
