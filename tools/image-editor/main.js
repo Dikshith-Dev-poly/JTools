@@ -7,6 +7,12 @@ import { flipH } from "./features/flipH.js";
 import { flipV } from "./features/flipV.js";
 import { brightnessM, brightness } from "./features/brightness.js";
 import { contrastM, contrast } from "./features/contrast.js";
+import { saturationM, saturation } from "./features/saturation.js";
+import { emboss } from "./features/emboss.js";
+import { boxBlur, GaussianBlur } from "./features/blur.js";
+import { gray, grayM } from "./features/gray.js";
+import { invertColor } from "./features/invertColor.js";
+import { edgeDetection } from "./features/edgeDetection.js";
 
 const upload = document.querySelector("input[type='file']");
 let crop;
@@ -220,6 +226,45 @@ document.querySelector("#right-option-container ul").addEventListener("click", (
         } else {
             contrast(ctx, imgRef, crop);
         }
-
+    } else if (e.target.matches(".ros")) {
+        if (e.target.classList[1] === "active-right-option") {
+            saturationM(ctx);
+        } else {
+            saturation(ctx, imgRef, crop);
+        }
+    }
+    else if (e.target.matches(".roem")) {
+        if (e.target.classList[1] === "active-right-option") {
+            emboss(ctx);
+        } else {
+            ctx.drawImage(imgRef, 0, 0);
+        }
+    } else if (e.target.matches(".robl")) {
+        if (e.target.classList[1] === "active-right-option") {
+            for (let i = 0; i < 10; i++) {
+                boxBlur(ctx);
+                // GaussianBlur(ctx);
+            }
+        } else {
+            ctx.drawImage(imgRef, 0, 0);
+        }
+    } else if (e.target.matches(".rog")) {
+        if (e.target.classList[1] === "active-right-option") {
+            grayM(ctx);
+        } else {
+            gray(ctx, imgRef, crop);
+        }
+    } else if (e.target.matches(".roi")) {
+        if (e.target.classList[1] === "active-right-option") {
+            invertColor(ctx);
+        } else {
+            ctx.drawImage(imgRef, 0, 0);
+        }
+    } else if (e.target.matches(".roe")) {
+        if (e.target.classList[1] === "active-right-option") {
+            edgeDetection(ctx);
+        } else {
+            ctx.drawImage(imgRef, 0, 0);
+        }
     }
 })
