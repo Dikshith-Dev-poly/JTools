@@ -5,6 +5,7 @@ import { rotateL } from "./features/rotateL.js";
 import { rotateR } from "./features/rotateR.js";
 import { flipH } from "./features/flipH.js";
 import { flipV } from "./features/flipV.js";
+import { brightnessM, brightness } from "./features/brightness.js";
 
 const upload = document.querySelector("input[type='file']");
 let crop;
@@ -197,3 +198,20 @@ function reset() {
 
 
 //right sidebar options
+document.querySelectorAll("#right-option-container ul li").forEach((li) => {
+    li.addEventListener("click", () => {
+        li.classList.toggle("active-right-option");
+    })
+})
+
+
+document.querySelector("#right-option-container ul").addEventListener("click", (e) => {
+    if (e.target.matches(".rob")) {
+        if (e.target.classList[1] === "active-right-option") {
+            brightnessM(ctx);
+        } else {
+            // brightnessM(ctx, -50);
+            brightness(ctx, imgRef, crop);
+        }
+    }
+})
