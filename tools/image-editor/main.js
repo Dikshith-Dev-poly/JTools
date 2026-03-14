@@ -6,6 +6,7 @@ import { rotateR } from "./features/rotateR.js";
 import { flipH } from "./features/flipH.js";
 import { flipV } from "./features/flipV.js";
 import { brightnessM, brightness } from "./features/brightness.js";
+import { contrastM, contrast } from "./features/contrast.js";
 
 const upload = document.querySelector("input[type='file']");
 let crop;
@@ -213,5 +214,12 @@ document.querySelector("#right-option-container ul").addEventListener("click", (
             // brightnessM(ctx, -50);
             brightness(ctx, imgRef, crop);
         }
+    } else if (e.target.matches(".roc")) {
+        if (e.target.classList[1] === "active-right-option") {
+            contrastM(ctx);
+        } else {
+            contrast(ctx, imgRef, crop);
+        }
+
     }
 })
