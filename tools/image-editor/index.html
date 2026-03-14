@@ -90,7 +90,7 @@
                     </li>
                     <div id="transform-option">
                         <ul>
-                            <li>
+                            <li id="rl">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                     width="24px" fill="#e3e3e3">
                                     <path
@@ -98,7 +98,7 @@
                                 </svg>
                                 Rotate L
                             </li>
-                            <li>
+                            <li id="rr">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                     width="24px" fill="#e3e3e3">
                                     <path
@@ -106,7 +106,7 @@
                                 </svg>
                                 Rotate R
                             </li>
-                            <li>
+                            <li id="fh">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     width="20px">
                                     <polyline points="17 1 17 23"></polyline>
@@ -114,7 +114,7 @@
                                 </svg>
                                 Flip H
                             </li>
-                            <li>
+                            <li id="fv">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     width="20px">
                                     <polyline points="1 13 22 13"></polyline>
@@ -137,6 +137,8 @@
     </main>
     <input type="file" accept="image/*" style="display: none;">
     <script src="./features/crop.js" type="module"></script>
+    <script src="./features/rotateL.js" type="module"></script>
+    <script src="./features/rotationR.js" type="module"></script>
     <script src="main.js" type="module"></script>
 </body>
 

@@ -1,8 +1,12 @@
 "use strict";
 
 import { cropImage, customCrop } from "./features/crop.js"
+import { rotateL } from "./features/rotateL.js";
+import { rotateR } from "./features/rotateR.js";
 
 const upload = document.querySelector("input[type='file']");
+let crop;
+let rotateAngle = 0;
 
 
 document.querySelector("#upload-btn").addEventListener("click", () => {
@@ -52,6 +56,7 @@ function drawImageToCanvas(file) {
         const img = new Image();
         img.onload = () => {
             imgRef = img;
+            reset();
             canvas.width = img.naturalWidth;
             canvas.height = img.naturalHeight;
             ctx.imageSmoothingEnabled = true;
@@ -139,14 +144,39 @@ document.querySelectorAll("#aspect-ratio ul li").forEach((li) => {
     li.addEventListener("click", () => {
         document.querySelectorAll("#aspect-ratio ul li").forEach((li) => li.classList.remove("active-crop"))
         li.classList.add("active-crop")
-        cropImage(ctx, imgRef, li.dataset.ratio);
+        crop = cropImage(ctx, imgRef, li.dataset.ratio);
     })
 })
 
+function resetCrop() {
+    crop = {};
+    document.querySelectorAll("#aspect-ratio ul li").forEach((li) => {
+        li.classList.remove("active-crop")
+    })
+    const firstLi = document.querySelectorAll("#aspect-ratio ul li")[0];
+    firstLi.classList.add("active-crop");
+    crop = cropImage(ctx, imgRef, firstLi.dataset.ratio);
+}
 
 
 document.querySelector("#apply-crop-btn").addEventListener("click", () => {
     const width = Number(document.querySelector("#left-width-option input").value);
     const height = Number(document.querySelector("#left-height-option input").value);
-    customCrop(ctx, imgRef, width, height);
+    crop = customCrop(ctx, imgRef, width, height);
 });
+
+
+//transform
+document.querySelector("#transform-option ul").addEventListener("click", (e) => {
+    if (e.target.matches("#rl")) {
+        rotateAngle = rotateL(ctx, imgRef, rotateAngle, crop);
+    } else if (e.target.matches("#rr")) {
+        rotateAngle = rotateR(ctx, imgRef, rotateAngle, crop);
+    }
+})
+
+
+function reset() {
+    resetCrop();
+    rotateAngle = 0;
+}

@@ -19,6 +19,7 @@ export function cropImage(ctx, img, ratio) {
         console.error("crop:Parameter missing");
         return;
     }
+
     if (ratio === "free") {
         ctx.canvas.width = img.width;
         ctx.canvas.height = img.height;
@@ -55,6 +56,9 @@ export function cropImage(ctx, img, ratio) {
     ctx.canvas.width = cropWidth;
     ctx.canvas.height = cropHeight;
     ctx.drawImage(img, sx, sy, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
+    return {
+        sx, sy, cropWidth, cropHeight
+    }
 }
 
 
@@ -70,4 +74,7 @@ export function customCrop(ctx, img, width, height) {
     ctx.canvas.width = width;
     ctx.canvas.height = height;
     ctx.drawImage(img, sx, sy, width, height, 0, 0, width, height);
+    return {
+        sx, sy, cropWidth: width, cropHeight: height
+    }
 }
