@@ -73,10 +73,12 @@ function drawImageToCanvas(file) {
             ctx.imageSmoothingQuality = "high";
             ctx.drawImage(img, 0, 0);
             document.querySelector("#upload-btn").style.pointerEvents = "";
+            document.querySelectorAll(".active-right-option").forEach((active) => active.classList.remove("active-right-option"));
         }
         img.onerror = () => {
             console.error("Failed to load image");
             document.querySelector("#upload-btn").style.pointerEvents = "";
+            document.querySelectorAll(".active-right-option").forEach((active) => active.classList.remove("active-right-option"));
 
         }
         img.src = e.target.result;
@@ -267,4 +269,47 @@ document.querySelector("#right-option-container ul").addEventListener("click", (
             ctx.drawImage(imgRef, 0, 0);
         }
     }
+})
+
+
+//export
+document.querySelector("#export-btn").addEventListener("click", (e) => {
+    document.querySelector("#popup-container").style.display = "flex";
+})
+document.querySelector("#popup-container").addEventListener("click", (e) => {
+    if (e.target.matches("#popup-container")) {
+        document.querySelector("#popup-container").style.display = "none";
+    }
+})
+
+
+function exportImage(canvas, format = "png", quality = 1) {
+    const mimeTypes = {
+        png: "image/png",
+        jpg: "image/jpeg",
+        jpeg: "image/jpeg",
+        webp: "image/webp"
+    };
+    const type = mimeTypes[format];
+    canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `image.${format}`;
+        link.click();
+        URL.revokeObjectURL(url);
+    }, type, quality);
+}
+
+document.querySelectorAll(".cont1 ul li").forEach((li) => {
+    li.addEventListener("click", () => {
+        document.querySelectorAll(".cont1 ul li").forEach((li) => li.classList.remove("exp-active"));
+        li.classList.add("exp-active");
+    })
+})
+
+document.querySelector(".exp-btn").addEventListener("click", () => {
+    const format = document.querySelector(".exp-active").innerText;
+    const quality = document.querySelector(".exp-active").value;
+    exportImage(canvas, format, quality);
 })

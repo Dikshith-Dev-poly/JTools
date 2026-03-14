@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Editor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -144,11 +144,28 @@
                     <li class="roi">invert colors</li>
                     <li class="roe">Edge detection</li>
                 </ul>
-
-
             </div>
         </aside>
+        <div id="popup-container">
+            <div id="popup">
+                <div class="cont1">
+                    <p>Format</p>
+                    <ul>
+                        <li class="exp-active">png</li>
+                        <li>jpg</li>
+                        <li>jpeg</li>
+                        <li>webp</li>
+                    </ul>
+                </div>
+                <div class="cont2">
+                    <p>Quality</p>
+                    <input type="range" id="quality" min="0" max="1" step="0.5">
+                </div>
+                <button class="exp-btn">Export</button>
+            </div>
+        </div>
     </main>
+
     <input type="file" accept="image/*" style="display: none;">
     <script src="./features/crop.js" type="module"></script>
     <script src="./features/rotateL.js" type="module"></script>
@@ -164,5 +181,3 @@
     <script src="./features/edgeDetection.js" type="module"></script>
     <script src="main.js" type="module"></script>
 </body>
-
-</html>

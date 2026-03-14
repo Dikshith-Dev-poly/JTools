@@ -2,6 +2,7 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     overflow: hidden;
  }
 
 
@@ -238,7 +239,7 @@
 
  #transform-option.show {
      opacity: 1;
-     height: 120px;
+     height: 140px;
  }
 
  #crop-resize-option.show {
@@ -377,7 +378,7 @@
 
  #right-option-container {
      width: 100%;
-     height: 300px;
+     height: 400px;
      padding: 20px;
  }
 
@@ -409,4 +410,92 @@
      background-color: var(--accent-bg);
      border: 2px solid var(--accent);
      color: var(--accent);
+ }
+
+ #popup-container {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: absolute;
+     color: var(--text);
+     font-family: var(--mono);
+     display: none;
+ }
+
+ #popup {
+     background-color: rgba(0, 0, 0, 0.815);
+     width: 400px;
+     height: 300px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     padding: 30px;
+     border-radius: 10px;
+     border: 2px solid var(--border);
+     align-items: center;
+     justify-content: center;
+ }
+
+ .cont1 {
+     width: 100%;
+     height: 60px;
+ }
+
+ .cont1 ul {
+     margin-top: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+     list-style: none;
+ }
+
+ .cont1 ul li {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 14px;
+     border-radius: 6px;
+     width: 100px;
+     height: 20px;
+     background-color: var(--accent-bg);
+     border: 2px solid var(--border2);
+     cursor: pointer;
+     transition: 200ms ease-in-out;
+ }
+
+ .cont1 ul li:hover {
+     background-color: var(--bg4);
+ }
+
+ .cont1 ul li.exp-active {
+     background-color: var(--accent2);
+ }
+
+ .cont2 {
+     width: 100%;
+     height: 100px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 40px;
+ }
+
+ .exp-btn {
+     width: 200px;
+     height: 40px;
+     border: 2px solid var(--accent);
+     background-color: var(--accent-bg);
+     outline: none;
+     color: var(--text);
+     cursor: pointer;
+     transition: 200ms ease-in-out;
+     border-radius: 6px;
+ }
+
+ .exp-btn:hover {
+     background-color: #7b6aff61;
  }
