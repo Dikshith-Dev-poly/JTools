@@ -63,23 +63,23 @@
                         <div id="aspect-ratio">
                             Aspect ratio
                             <ul>
-                                <li class="active-crop">Free</li>
-                                <li>1:1</li>
-                                <li>4:3</li>
-                                <li>16:9</li>
-                                <li>3:2</li>
-                                <li>9:16</li>
+                                <li class="active-crop" data-ratio="free">Free</li>
+                                <li data-ratio="1:1">1:1</li>
+                                <li data-ratio="4:3">4:3</li>
+                                <li data-ratio="16:9">16:9</li>
+                                <li data-ratio="3:2">3:2</li>
+                                <li data-ratio="9:16">9:16</li>
                             </ul>
                         </div>
                         <div id="left-width-option">
                             width
-                            <input type="number" placeholder="px">
+                            <input type="number" placeholder="px" min="0" step="100">
                         </div>
                         <div id="left-height-option">
                             Height
-                            <input type="number" placeholder="px">
+                            <input type="number" placeholder="px" min="0" step="100">
                         </div>
-                        <button>Apply Crop</button>
+                        <button id="apply-crop-btn">Apply Crop</button>
                     </div>
                     <li id="transform-expand">
                         Transform
@@ -136,7 +136,8 @@
         </aside>
     </main>
     <input type="file" accept="image/*" style="display: none;">
-    <script src="main.js"></script>
+    <script src="./features/crop.js" type="module"></script>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>

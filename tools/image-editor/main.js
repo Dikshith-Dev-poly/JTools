@@ -1,5 +1,6 @@
 "use strict";
 
+import { cropImage, customCrop } from "./features/crop.js"
 
 const upload = document.querySelector("input[type='file']");
 
@@ -40,7 +41,7 @@ function drawDefaultCanvas() {
 
 drawDefaultCanvas();
 
-function drawImage(file) {
+function drawImageToCanvas(file) {
     document.querySelector("#upload-btn").style.pointerEvents = "none";
     document.querySelector("#dropzone").style.display = "none";
     displayFileDetail(file);
@@ -66,9 +67,6 @@ function drawImage(file) {
         img.src = e.target.result;
     }
     reader.readAsDataURL(file);
-
-
-
 }
 
 
@@ -80,7 +78,7 @@ document.querySelector("input[type='file']").addEventListener("change", (e) => {
         console.error("Upload image");
         return;
     }
-    drawImage(e.target.files[0]);
+    drawImageToCanvas(e.target.files[0]);
 })
 
 
@@ -131,5 +129,24 @@ dragzone.addEventListener("drop", (e) => {
     if (!file.type.startsWith("image/")) {
         console.error("Upload image");
     }
-    drawImage(file);
+    drawImageToCanvas(file);
 })
+
+
+
+//crop option
+document.querySelectorAll("#aspect-ratio ul li").forEach((li) => {
+    li.addEventListener("click", () => {
+        document.querySelectorAll("#aspect-ratio ul li").forEach((li) => li.classList.remove("active-crop"))
+        li.classList.add("active-crop")
+        cropImage(ctx, imgRef, li.dataset.ratio);
+    })
+})
+
+
+
+document.querySelector("#apply-crop-btn").addEventListener("click", () => {
+    const width = Number(document.querySelector("#left-width-option input").value);
+    const height = Number(document.querySelector("#left-height-option input").value);
+    customCrop(ctx, imgRef, width, height);
+});
