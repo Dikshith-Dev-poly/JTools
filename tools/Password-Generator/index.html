@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>PASSWORD <span>GENERATOR</span></h1>
+        </header>
+        <div class="container">
+            <div class="output">
+                <div class="result"></div>
+                <div class="strength-level">
+                    <div class="l1 l greenbg"></div>
+                    <div class="l2 l"></div>
+                    <div class="l3 l"></div>
+                    <div class="l4 l"></div>
+                    <div class="strength-text greenc">VERY WEAK</div>
+                </div>
+                <div class="crack-time">
+                    <p>crack time (10B/s): instantly</p>
+                </div>
+                <div class="detail">
+                    <div class="poll-size">Pool size: <span>0</span></div>
+                    <div class="entropy">Entropy: <span>0</span> bits</div>
+                    <div class="length-detail">Length: <span>0</span> chars</div>
+                </div>
+            </div>
+            <div class="options">
+                <div class="length">
+                    <div class="length-display">
+                        <p>LENGTH</p>
+                        <p class="length-text">0</p>
+                    </div>
+                    <input type="range" id="len" min="4" max="64" value="4">
+                </div>
+                <div class="btn-options">
+                    <div class="char-text">Character Sets</div>
+                    <div class="btn-cont">
+                        <div class="upper op-btn">
+                            <div class="content">
+                                <div class="logo">A</div>
+                                <div class="option-det">
+                                    <p class="bluec">Uppercase</p>
+                                    <p class="opd-p2">A-Z</p>
+                                </div>
+                            </div>
+                            <div class="click-btn uclick">
+                            </div>
+                        </div>
+                        <div class="lower op-btn">
+                            <div class="content">
+                                <div class="logo">a</div>
+                                <div class="option-det">
+                                    <p class="greenc">Lowercase</p>
+                                    <p class="opd-p2">a-z</p>
+                                </div>
+                            </div>
+                            <div class="click-btn lclick">
+                            </div>
+                        </div>
+                        <div class="num op-btn">
+                            <div class="content">
+                                <div class="logo">1</div>
+                                <div class="option-det">
+                                    <p class="orangec">Number</p>
+                                    <p class="opd-p2">0-9</p>
+                                </div>
+                            </div>
+                            <div class="click-btn numclick">
+                            </div>
+                        </div>
+                        <div class="symb op-btn">
+                            <div class="content">
+                                <div class="logo">#</div>
+                                <div class="option-det">
+                                    <p class="bluec">Symbols</p>
+                                    <p class="opd-p2">!@#$%^&*()</p>
+                                </div>
+                            </div>
+                            <div class="click-btn symbclick">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="generate">GENERATE</div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
