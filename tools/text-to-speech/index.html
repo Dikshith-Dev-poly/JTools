@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="heading"><span class="s1">Text</span> To <span class="s2">Speech</span></div>
+        <div class="container">
+            <div class="input">
+                <textarea id="inp" placeholder="Enter your text here...."></textarea>
+                <span id="char">1000000 chars</span>
+            </div>
+            <div class="state">
+                <div class="state-buttons">
+                    <select id="lang">
+                    </select>
+                    <button id="speak" class="sbtn">Speak</button>
+                    <button id="pause" class="sbtn">Pause</button>
+                    <button id="resume" class="sbtn" disabled>Resume</button>
+                    <button id="stop" class="sbtn">Stop</button>
+                </div>
+                <div class="controls">
+                    <div class="pitch card">
+                        <p>Pitch</p>
+                        <input type="range" id="pitch" min="0" max="2" value="1" step="0.5">
+                        <span>1.0</span>
+                    </div>
+                    <div class="speed card">
+                        <p>Speed</p>
+                        <input type="range" id="speed" min="0.1" max="10" value="1.1" step="0.1">
+                        <span>1</span>
+                    </div>
+                    <div class="volume card">
+                        <p>Volume</p>
+                        <input type="range" id="volume" min="0" max="1" value="1" step="0.1">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="status">
+                    <span>Play</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
