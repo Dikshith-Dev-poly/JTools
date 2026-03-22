@@ -43,20 +43,6 @@
     },
     {
         "id": 4,
-        "name": "Country Detail",
-        "description": "Explore detailed information about any country.",
-        "category": "Education",
-        "location": "tools/country-detail/index.html",
-        "image": "img/country-detail.png",
-        "tags": [
-            "country",
-            "population",
-            "facts",
-            "world"
-        ]
-    },
-    {
-        "id": 5,
         "name": "Password Generator",
         "description": "Generate secure and strong passwords instantly.",
         "category": "Security",
@@ -70,7 +56,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Text to Speech",
         "description": "Convert written text into natural speech.",
         "category": "Accessibility",
@@ -84,7 +70,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 6,
         "name": "Sudoku Solver",
         "description": "Solve Sudoku puzzles instantly with logic.",
         "category": "Games",
@@ -98,7 +84,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "CSV Viewer",
         "description": "View and analyze CSV files easily.",
         "category": "Data",
@@ -109,34 +95,6 @@
             "table",
             "data",
             "viewer"
-        ]
-    },
-    {
-        "id": 9,
-        "name": "News Aggregator",
-        "description": "Stay updated with the latest global news.",
-        "category": "Information",
-        "location": "tools/news-aggregator/index.html",
-        "image": "img/news-aggregator.png",
-        "tags": [
-            "news",
-            "headlines",
-            "world",
-            "updates"
-        ]
-    },
-    {
-        "id": 10,
-        "name": "QR Code Generator",
-        "description": "Generate QR codes instantly for any text or link.",
-        "category": "Utility",
-        "location": "tools/qr-code/index.html",
-        "image": "img/qr-code.png",
-        "tags": [
-            "qr",
-            "barcode",
-            "generator",
-            "scan"
         ]
     }
 ]
