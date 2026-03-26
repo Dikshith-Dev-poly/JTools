@@ -247,6 +247,7 @@ function crackTime() {
 
 
 document.querySelector(".result").addEventListener("click", (e) => {
+    if (e.target.textContent.trim() === "") return;
     navigator.clipboard.writeText(e.target.textContent).then(() => {
         alert("Copied");
     })

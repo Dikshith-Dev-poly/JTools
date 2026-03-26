@@ -1,20 +1,6 @@
 [
     {
         "id": 1,
-        "name": "Drawing",
-        "description": "Draw. Design. Express.",
-        "category": "Art & Design",
-        "location": "tools/drawing/index.html",
-        "image": "img/drawing.png",
-        "tags": [
-            "fun",
-            "draw",
-            "creativity",
-            "sketch"
-        ]
-    },
-    {
-        "id": 2,
         "name": "Image Editor",
         "description": "Edit, crop, and enhance your images instantly.",
         "category": "Media",
@@ -28,7 +14,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "Weather",
         "description": "Get real-time weather updates worldwide.",
         "category": "Utility",
@@ -42,7 +28,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Password Generator",
         "description": "Generate secure and strong passwords instantly.",
         "category": "Security",
@@ -56,7 +42,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "Text to Speech",
         "description": "Convert written text into natural speech.",
         "category": "Accessibility",
@@ -70,7 +56,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Sudoku Solver",
         "description": "Solve Sudoku puzzles instantly with logic.",
         "category": "Games",
@@ -84,7 +70,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 6,
         "name": "CSV Viewer",
         "description": "View and analyze CSV files easily.",
         "category": "Data",
