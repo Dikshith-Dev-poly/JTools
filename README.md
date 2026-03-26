@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-🔗 
+🔗 [JTools](https://jtools-flame.vercel.app/)
 
 ---
 
@@ -53,12 +53,10 @@ A fully functional image editor built using the **Canvas API**:
 * 🔄 Rotate (left/right)
 * 🔁 Flip (horizontal & vertical)
 * 🎛️ Adjustments:
-
   * Brightness
   * Contrast
   * Saturation
 * 🎨 Filters:
-
   * Blur
   * Grayscale
   * Invert
@@ -87,7 +85,6 @@ A fully functional image editor built using the **Canvas API**:
 * 🔣 Symbols
 * 🎲 Secure randomness using **Fisher-Yates Shuffle**
 * 📊 Strength indicator:
-
   * Entropy calculation
   * Pool size
 * 📋 Copy to clipboard (Clipboard API)
@@ -98,15 +95,13 @@ A fully functional image editor built using the **Canvas API**:
 
 * 🎤 Convert text to speech using Web Speech API
 * 🎚️ Controls:
-
   * Speed
   * Pitch
   * Volume
-* ▶️ Playback controls:
-
-  * Speak / Pause / Resume / Stop
-* 🌐 Voice selection (all available voices)
-* 🔁 State management for playback
+  * ▶️ Playback controls:
+    * Speak / Pause / Resume / Stop
+  * 🌐 Voice selection (all available voices)
+  * 🔁 State management for playback
 
 ---
 
@@ -115,7 +110,6 @@ A fully functional image editor built using the **Canvas API**:
 * 🧠 Built using **Backtracking + Recursion + DFS**
 * ⚡ Optimized with **Bitmasking**
 * 🎮 Difficulty modes:
-
   * Easy
   * Medium
   * Hard
@@ -127,7 +121,6 @@ A fully functional image editor built using the **Canvas API**:
 
 * 📂 Drag & Drop CSV upload
 * ⚡ Large file handling using:
-
   * **Web Workers** (no UI blocking)
   * Streaming & chunk processing
 * 📄 Pagination for large datasets
