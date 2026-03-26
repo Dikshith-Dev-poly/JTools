@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-🔗 [JTools](https://jtools-flame.vercel.app/)
+🔗 [JTools](https://j-tools-rho.vercel.app/)
 
 ---
 
