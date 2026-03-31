@@ -32,7 +32,7 @@
         "name": "Password Generator",
         "description": "Generate secure and strong passwords instantly.",
         "category": "Security",
-        "location": "tools/password-generator/index.html",
+        "location": "tools/Password-Generator/index.html",
         "image": "img/password-generator.png",
         "tags": [
             "security",
